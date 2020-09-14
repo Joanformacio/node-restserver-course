@@ -15,7 +15,8 @@
 
  // parse application/json
  app.use(bodyParser.json()) //middleware
- app.use(require('./routes/usuario'))
+
+ app.use(require('./routes/index')); //config global de rutas
 
 
 
