@@ -2,6 +2,7 @@
 
  const express = require('express');
  const mongoose = require('mongoose');
+ const path = require('path')
 
  const app = express();
  const bodyParser = require('body-parser');
@@ -15,6 +16,9 @@
 
  // parse application/json
  app.use(bodyParser.json()) //middleware
+     //habilitar el public
+ app.use(express.static(path.resolve(__dirname + '/public')))
+
 
  app.use(require('./routes/index')); //config global de rutas
 
